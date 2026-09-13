@@ -1,0 +1,59 @@
+---
+name: genomics
+description: Apply biological and computational correctness rules for genomic references, sequencing data, coordinates, variants and HGVS nomenclature, transcripts, inheritance, gene expression, and molecular consequences. Use for genomics tasks where reference identity, file semantics, annotation, genotype, phase, or biological context can change interpretation.
+---
+
+# Genomics
+
+Use this skill for genome analysis, sequencing data, variant representation or interpretation, genome annotation, pedigree reasoning, sequence-based prediction, and reporting of genomic results.
+
+## Core rules
+
+- Genomic coordinates, alleles, alignments, and annotations are reference-dependent. Establish reference identity at the level required by the task rather than assuming that an assembly label alone is sufficient.
+- Genome assembly, patch release, exact reference sequence or FASTA, contig set, annotation release, transcript, and protein isoform are distinct objects and should not be collapsed into one identifier.
+- File formats carry semantics. FASTQ quality, SAM/BAM/CRAM alignments, genomic intervals, and VCF/BCF records must be interpreted according to their own fields, coordinate conventions, metadata, and producing workflow.
+- Preserve reference and alternate alleles, ploidy, genotype, phase, uncertainty, and transformation provenance when they affect variant identity or interpretation.
+- Do not assume that different textual representations describe different biological alleles. Compare variants within a common reference and representation framework.
+- When reporting sequence variants using HGVS, use the current HGVS Nomenclature recommendations and an appropriate versioned reference sequence. A gene symbol, genome-build label, or VCF coordinate alone is not a complete HGVS description.
+- Coding, splice, RNA, and protein consequences can be transcript-dependent. Preserve the transcript and version when they affect the claim.
+- Molecular consequence, predicted functional effect, experimentally measured effect, pathogenicity, penetrance, and phenotype are different levels of inference.
+- Do not assume that two heterozygous variants in the same gene are in trans or that a gene has one fixed inheritance mechanism.
+- Do not treat gene expression or regulatory activity as context-free properties of a gene.
+- Treat indexes as derived access structures. They must correspond to the current data file and compatible ordering or compression requirements.
+
+## AI behaviour
+
+Before interpreting a coordinate, interval, allele, alignment, or other reference-dependent result, establish the relevant reference. Do not infer an assembly from chromosome naming alone. For reproducible computational work, preserve the exact reference sequence collection or FASTA and stronger identifiers such as accessions or digests where available.
+
+Before converting between genomic formats, establish the coordinate convention, reference sequence, strand semantics, and representation rules of both formats. Do not apply a universal one-base offset or assume that normalization conventions are interchangeable.
+
+Before interpreting VCF or BCF content, inspect the header and producing workflow. Do not give `PASS`, `QUAL`, `GQ`, an absent record, or a genotype string stronger meaning than the file supports.
+
+When exact sequence-variant nomenclature is required, use current HGVS Nomenclature. Establish the reference-sequence accession and version before generating the description. Do not convert VCF to HGVS by coordinate or string manipulation alone. For human transcript-based reporting, use the transcript specified by the source analysis or, when an appropriate standard transcript must be selected, follow current MANE guidance. Do not silently replace a supplied transcript. Mark predicted RNA or protein consequences as predicted, and validate complex or uncertain HGVS descriptions rather than extrapolating syntax.
+
+Before reporting a coding or protein consequence, establish the transcript, transcript version where relevant, coding frame, strand, and genetic code. Do not present a Sequence Ontology consequence, Ensembl IMPACT category, or similar molecular annotation as a clinical pathogenicity classification.
+
+Before inferring inheritance or disease from genotype data, establish relevant ploidy, phase, segregation, germline or somatic context, and the applicable gene-disease mechanism. Keep segregation, population frequency, computational prediction, functional evidence, and clinical interpretation as distinct evidence types.
+
+Qualify expression and regulatory claims by their biological and technical context when that context affects interpretation. Do not infer protein abundance, activity, or universal biological relevance directly from an assay-specific RNA measurement.
+
+When exact syntax, field definitions, identifiers, nomenclature, or ontology terms matter, use the current authoritative specification or maintained resource rather than reproducing a local substitute.
+
+## References
+
+Read the relevant reference when the task depends on it:
+
+- [`references/genome-organisation.md`](references/genome-organisation.md) for DNA, chromosomes, genes, genomes, genomic compartments, and the distinction between genetic and inherited
+- [`references/reference-genomes.md`](references/reference-genomes.md) for assemblies, patch releases, exact reference identity, sequence provenance, coordinate systems, and migration
+- [`references/reference-sequence-files.md`](references/reference-sequence-files.md) for FASTA, sequence identifiers, FAI indexes, dictionaries, masking, and reference-file provenance
+- [`references/sequencing-reads-and-quality.md`](references/sequencing-reads-and-quality.md) for FASTQ, paired reads, preprocessing, and Phred-scaled quality
+- [`references/alignment-files-and-indexes.md`](references/alignment-files-and-indexes.md) for SAM, BAM, CRAM, alignment semantics, BAI, CSI, and CRAI
+- [`references/genomic-intervals.md`](references/genomic-intervals.md) for BED, interval coordinate conventions, strand, and interval semantics
+- [`references/variant-call-files-and-indexes.md`](references/variant-call-files-and-indexes.md) for VCF, BCF, gVCF, genotype fields, BGZF, TBI, and CSI
+- [`references/variant-representation.md`](references/variant-representation.md) for allele identity, normalization, decomposition, equivalent representations, and VCF-versus-HGVS representation
+- [`references/variant-nomenclature.md`](references/variant-nomenclature.md) for HGVS sequence-variant descriptions, versioned reference sequences, MANE transcript selection, molecular-level prefixes, and predicted versus observed consequences
+- [`references/transcripts.md`](references/transcripts.md) for transcript identity, versions, isoforms, transcript selection, and transcript-dependent consequences
+- [`references/coding-sequence-and-protein-consequences.md`](references/coding-sequence-and-protein-consequences.md) for coding frames, codons, genetic codes, molecular consequence terms, and protein consequences
+- [`references/inheritance-and-phase.md`](references/inheritance-and-phase.md) for genotype, ploidy, inheritance, phase, segregation, mosaicism, heteroplasmy, and pedigree reasoning
+- [`references/gene-expression.md`](references/gene-expression.md) for gene and transcript expression, assay context, cellular composition, normalization, and regulatory interpretation
+

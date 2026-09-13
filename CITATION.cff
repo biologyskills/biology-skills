@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Biology Skills in research, cite the repository release you used."
+title: "Biology Skills"
+type: software
+authors:
+  - name: "Biology Skills contributors"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/biologyskills/biology-skills"
+url: "https://biologyskills.com"
