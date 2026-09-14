@@ -27,6 +27,21 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/github/license/biologyskills/biology-skills" alt="License">
   </a>
+
+
+  <a href="https://claude.ai">
+    <img src="https://img.shields.io/badge/Claude%20Code-Anthropic-purple" alt="Claude Code">
+  </a>
+  <a href="https://cursor.sh">
+    <img src="https://img.shields.io/badge/Cursor-AI%20IDE-orange" alt="Cursor">
+  </a>
+  <a href="https://github.com/openai/codex">
+    <img src="https://img.shields.io/badge/Codex%20CLI-OpenAI-green" alt="Codex CLI">
+  </a>
+  <a href="https://github.com/google-gemini/gemini-cli">
+    <img src="https://img.shields.io/badge/Gemini%20CLI-Google-blue" alt="Gemini CLI">
+  </a>
+
 </p>
 
 <p align="center">
@@ -35,6 +50,7 @@
   <a href="https://biologyskills.com/skills/"><strong>Browse skills</strong></a> ·
   <a href="CONTRIBUTING.md"><strong>Contribute</strong></a>
 </p>
+
 
 ---
 
@@ -69,7 +85,7 @@ See [`INSTALL.md`](INSTALL.md) for installation options.
 
 ## Example: improving a scientific downloads page
 
-The Google DeepMind AlphaGenome Atlas downloads page provides the data, but omits key reference, release, and file provenance needed for reproducible use.
+The Google DeepMind AlphaGenome Atlas downloads page provides the data, **but omits** key reference, release, and file provenance needed for reproducible use.
 
 Using Biology Skills, the same page can expose this metadata clearly without adding visual clutter.
 
