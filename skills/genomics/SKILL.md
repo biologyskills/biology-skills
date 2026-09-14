@@ -1,11 +1,11 @@
 ---
 name: genomics
-description: Apply biological and computational correctness rules for genomic references, sequencing data, coordinates, variants and HGVS nomenclature, transcripts, inheritance, gene expression, and molecular consequences. Use for genomics tasks where reference identity, file semantics, annotation, genotype, phase, or biological context can change interpretation.
+description: Apply biological and computational correctness rules for genomic references, sequencing data, coordinates, variant representation and qualification, HGVS nomenclature, transcripts, inheritance, gene expression, and molecular consequences. Use for genomics tasks where reference identity, file semantics, selection criteria, annotation, genotype, phase, or biological context can change interpretation.
 ---
 
 # Genomics
 
-Use this skill for genome analysis, sequencing data, variant representation or interpretation, genome annotation, pedigree reasoning, sequence-based prediction, and reporting of genomic results.
+Use this skill for genome analysis, sequencing data, variant representation or selection, variant interpretation, genome annotation, pedigree reasoning, sequence-based prediction, and reporting of genomic results.
 
 ## Core rules
 
@@ -14,6 +14,9 @@ Use this skill for genome analysis, sequencing data, variant representation or i
 - File formats carry semantics. FASTQ quality, SAM/BAM/CRAM alignments, genomic intervals, and VCF/BCF records must be interpreted according to their own fields, coordinate conventions, metadata, and producing workflow.
 - Preserve reference and alternate alleles, ploidy, genotype, phase, uncertainty, and transformation provenance when they affect variant identity or interpretation.
 - Do not assume that different textual representations describe different biological alleles. Compare variants within a common reference and representation framework.
+- Treat variant qualification as contextual rather than intrinsic. A variant qualifies only relative to declared criteria, their version, the application context, input data, and rule evaluation.
+- Do not equate qualification or passage through a variant-selection rule with pathogenicity, statistical significance, causality, reportability, prioritisation, or clinical action.
+- Treat scientifically consequential variant-selection criteria as part of the analysis specification. Preserve their field semantics, thresholds, logical structure, missing-value behaviour, external resources, and version when these affect which variants qualify.
 - When reporting sequence variants using HGVS, use the current HGVS Nomenclature recommendations and an appropriate versioned reference sequence. A gene symbol, genome-build label, or VCF coordinate alone is not a complete HGVS description.
 - Coding, splice, RNA, and protein consequences can be transcript-dependent. Preserve the transcript and version when they affect the claim.
 - Molecular consequence, predicted functional effect, experimentally measured effect, pathogenicity, penetrance, and phenotype are different levels of inference.
@@ -29,6 +32,8 @@ Before converting between genomic formats, establish the coordinate convention, 
 
 Before interpreting VCF or BCF content, inspect the header and producing workflow. Do not give `PASS`, `QUAL`, `GQ`, an absent record, or a genotype string stronger meaning than the file supports.
 
+Before applying, reproducing, or interpreting variant-selection criteria, establish the analysis context and the exact criteria set used. Determine the criteria version, input-field semantics, missing-value behaviour, logical structure, and material external resources. Do not reconstruct hidden selection logic from the resulting variant list alone, and do not silently treat missing values as satisfying a criterion. If qualification is reported, distinguish individual rule outcomes from any declared set-level qualifying status.
+
 When exact sequence-variant nomenclature is required, use current HGVS Nomenclature. Establish the reference-sequence accession and version before generating the description. Do not convert VCF to HGVS by coordinate or string manipulation alone. For human transcript-based reporting, use the transcript specified by the source analysis or, when an appropriate standard transcript must be selected, follow current MANE guidance. Do not silently replace a supplied transcript. Mark predicted RNA or protein consequences as predicted, and validate complex or uncertain HGVS descriptions rather than extrapolating syntax.
 
 Before reporting a coding or protein consequence, establish the transcript, transcript version where relevant, coding frame, strand, and genetic code. Do not present a Sequence Ontology consequence, Ensembl IMPACT category, or similar molecular annotation as a clinical pathogenicity classification.
@@ -37,7 +42,7 @@ Before inferring inheritance or disease from genotype data, establish relevant p
 
 Qualify expression and regulatory claims by their biological and technical context when that context affects interpretation. Do not infer protein abundance, activity, or universal biological relevance directly from an assay-specific RNA measurement.
 
-When exact syntax, field definitions, identifiers, nomenclature, or ontology terms matter, use the current authoritative specification or maintained resource rather than reproducing a local substitute.
+When exact syntax, field definitions, identifiers, nomenclature, rule semantics, or ontology terms matter, use the current authoritative specification or maintained resource rather than reproducing a local substitute.
 
 ## References
 
@@ -51,6 +56,7 @@ Read the relevant reference when the task depends on it:
 - [`references/genomic-intervals.md`](references/genomic-intervals.md) for BED, interval coordinate conventions, strand, and interval semantics
 - [`references/variant-call-files-and-indexes.md`](references/variant-call-files-and-indexes.md) for VCF, BCF, gVCF, genotype fields, BGZF, TBI, and CSI
 - [`references/variant-representation.md`](references/variant-representation.md) for allele identity, normalization, decomposition, equivalent representations, and VCF-versus-HGVS representation
+- [`references/qualifying-variants.md`](references/qualifying-variants.md) for contextual variant qualification, explicit and versioned selection criteria, QVSS, input-field semantics, missing-value handling, external-resource provenance, and QV application records
 - [`references/variant-nomenclature.md`](references/variant-nomenclature.md) for HGVS sequence-variant descriptions, versioned reference sequences, MANE transcript selection, molecular-level prefixes, and predicted versus observed consequences
 - [`references/transcripts.md`](references/transcripts.md) for transcript identity, versions, isoforms, transcript selection, and transcript-dependent consequences
 - [`references/coding-sequence-and-protein-consequences.md`](references/coding-sequence-and-protein-consequences.md) for coding frames, codons, genetic codes, molecular consequence terms, and protein consequences

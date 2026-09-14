@@ -4,7 +4,7 @@
 
 Biology Skills is an open-source collection of concise [Agent Skills](https://agentskills.io/) for biologically correct AI work. It helps agents preserve reference systems, provenance, experimental context, inheritance logic, and inference boundaries that are easy to lose in simplified interfaces or model outputs.
 
-Website: https://biologyskills.com
+Website: <https://biologyskills.com>
 
 ## Quick start
 
@@ -19,7 +19,9 @@ Use:
 
 Install or expose those directories using the Agent Skills mechanism supported by your AI client. See [`INSTALL.md`](INSTALL.md).
 
-## Browse
+## Examples to browse
+
+Search all skills at <https://biologyskills.com/skills/>
 
 ### Biology core
 
