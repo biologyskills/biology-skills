@@ -1,116 +1,158 @@
-# Biology Skills
+<p align="center">
+  <img
+    src=".github/assets/biology-skills-mascot.jpg"
+    width="150"
+    alt="Biology Skills"
+  />
+</p>
 
-**Biological operating rules for AI agents.**
+<h1 align="center">Biology Skills</h1>
 
-Biology Skills is an open-source collection of concise [Agent Skills](https://agentskills.io/) for biologically correct AI work. It helps agents preserve reference systems, provenance, experimental context, biological identity, inheritance logic, design semantics, and inference boundaries that are easy to lose in simplified interfaces or model outputs.
+<p align="center">
+  <strong>Biological operating rules for AI agents.</strong>
+</p>
 
-Website: https://biologyskills.com
+<p align="center">
+  Expert biological assumptions that scientific sources leave implicit,
+  made explicit for AI-assisted work.
+</p>
+
+<p align="center">
+  <a href="https://biologyskills.com">
+    <img src="https://img.shields.io/badge/website-biologyskills.com-24292f" alt="Website">
+  </a>
+  <a href="https://github.com/biologyskills/biology-skills/releases">
+    <img src="https://img.shields.io/github/v/release/biologyskills/biology-skills?color=2ea043" alt="Latest release">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/biologyskills/biology-skills" alt="License">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://biologyskills.com"><strong>Website</strong></a> ·
+  <a href="INSTALL.md"><strong>Install</strong></a> ·
+  <a href="https://biologyskills.com/skills/"><strong>Browse skills</strong></a> ·
+  <a href="CONTRIBUTING.md"><strong>Contribute</strong></a>
+</p>
+
+---
+
+Biology Skills is an open-source collection of concise [Agent Skills](https://agentskills.io/) for biologically correct AI work.
+
+Scientific literature, databases, software, and technical documentation are largely written for experts. Important assumptions are therefore often implicit: the exact reference sequence, whether a negative state was observable, which transcript defines a consequence, what constitutes an independent replicate, or what a model score actually represents.
+
+Biology Skills makes these assumptions operational so an AI agent knows **what it must preserve, verify, or qualify before reaching a conclusion**.
+
+<p align="center">
+  <img
+    src=".github/assets/biology-skills-browser.png"
+    width="900"
+    alt="Biology Skills domain and expert reference documentation"
+  />
+</p>
+
+<p align="center">
+  <em>Broad Agent Skills route tasks to focused expert references only when required.</em>
+</p>
 
 ## Quick start
 
 ```bash
 git clone https://github.com/biologyskills/biology-skills.git
+cd biology-skills
 ```
 
-Use:
+Install or expose the relevant directories using the Agent Skills mechanism supported by your AI client.
 
-* [`skills/biology-core/`](skills/biology-core/) for general biological reasoning, evidence, context, and provenance
-* [`skills/bioinformatics/`](skills/bioinformatics/) for computational identity, metadata, provenance, interoperability, and evidence semantics
-* [`skills/genomics/`](skills/genomics/) for genomic coordinates, variants, transcripts, inheritance, phase, and expression
-* [`skills/synthetic-biology/`](skills/synthetic-biology/) for engineered biological sequence design, neoantigen selection, peptide:HLA reasoning, and multi-target mRNA constructs
-* [`skills/quinary-inference/`](skills/quinary-inference/) for reasoning about support for complete causal explanations
+See [`INSTALL.md`](INSTALL.md) for installation options.
 
-Install or expose those directories using the Agent Skills mechanism supported by your AI client. See [`INSTALL.md`](INSTALL.md).
+## Skill domains
 
-## Examples to browse
+| Domain                                                   | What it protects                                                                                              |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [`biology-core`](skills/biology-core/)                   | Biological context, measurement, observability, evidence, provenance, and valid inference                     |
+| [`bioinformatics`](skills/bioinformatics/)               | Computational identity, mappings, metadata, provenance, interoperability, and evidence semantics              |
+| [`genomics`](skills/genomics/)                           | Reference systems, sequencing data, variants, transcripts, inheritance, callability, and population frequency |
+| [`experimental-design`](skills/experimental-design/)     | Experimental units, replication, dependence, controls, and technical confounding                              |
+| [`structural-biology`](skills/structural-biology/)       | Protein and residue identity, isoforms, constructs, structure mappings, and prediction confidence             |
+| [`biological-statistics`](skills/biological-statistics/) | Ascertainment, selection, denominators, target populations, dependence, and transportability                  |
+| [`synthetic-biology`](skills/synthetic-biology/)         | Patient-specific target identity, peptide:HLA reasoning, target-set selection, and engineered sequence design |
+| [`quinary-inference`](skills/quinary-inference/)         | Complete causal explanations, unresolved evidence, competing hypotheses, and posterior support                |
 
-Search all skills at https://biologyskills.com/skills/
+Browse the complete catalogue at **https://biologyskills.com/skills/**.
 
-### Biology core
+## What this prevents
 
-* [Biological context](skills/biology-core/references/biological-context.md)
-* [Evidence and claims](skills/biology-core/references/evidence-and-claims.md)
-* [Identifiers and provenance](skills/biology-core/references/identifiers-and-provenance.md)
+A technically plausible answer can still be biologically wrong.
 
-### Bioinformatics
+```text
+genomic coordinate
+    without an exact reference
 
-* [Metadata and provenance](skills/bioinformatics/references/metadata-and-provenance.md)
-* [QC outputs and sample identity](skills/bioinformatics/references/qc-outputs-and-sample-identity.md)
-* [Qualifying evidence](skills/bioinformatics/references/qualifying-evidence.md)
+no variant detected
+    without establishing assay scope or callability
 
-### Genomics
+protein consequence
+    without the transcript used to derive it
 
-* [Genome organisation](skills/genomics/references/genome-organisation.md)
-* [Reference genomes](skills/genomics/references/reference-genomes.md)
-* [Reference sequence files](skills/genomics/references/reference-sequence-files.md)
-* [Sequencing reads and quality](skills/genomics/references/sequencing-reads-and-quality.md)
-* [Alignment files and indexes](skills/genomics/references/alignment-files-and-indexes.md)
-* [Genomic intervals](skills/genomics/references/genomic-intervals.md)
-* [Variant call files and indexes](skills/genomics/references/variant-call-files-and-indexes.md)
-* [Variant representation](skills/genomics/references/variant-representation.md)
-* [Qualifying variants](skills/genomics/references/qualifying-variants.md)
-* [Variant nomenclature](skills/genomics/references/variant-nomenclature.md)
-* [Transcripts](skills/genomics/references/transcripts.md)
-* [Coding sequence and protein consequences](skills/genomics/references/coding-sequence-and-protein-consequences.md)
-* [Inheritance and phase](skills/genomics/references/inheritance-and-phase.md)
-* [Gene expression](skills/genomics/references/gene-expression.md)
+residue 117
+    without the sequence, isoform, construct, or numbering system
 
-### Synthetic biology
+300 measured cells
+    treated as 300 independent biological replicates
 
-* [Neoantigen identity and evidence](skills/synthetic-biology/references/neoantigen-identity-and-evidence.md)
-* [HLA presentation and immunogenicity](skills/synthetic-biology/references/hla-presentation-and-immunogenicity.md)
-* [Target-set selection under uncertainty](skills/synthetic-biology/references/target-set-selection-under-uncertainty.md)
-* [mRNA polyepitope construct design](skills/synthetic-biology/references/mrna-polyepitope-construct-design.md)
+allele frequency
+    without its callable denominator or population context
 
-### Quinary inference
+model rank
+    interpreted as a probability
 
-* [Explanatory hypotheses and posterior support](skills/quinary-inference/references/explanatory-hypotheses-and-posterior-support.md)
+predicted HLA binder
+    interpreted as a confirmed immunogenic neoantigen
+```
 
-## Why this exists
+These are not cosmetic metadata problems. They can change the biological conclusion.
 
-A genomic coordinate can be meaningless without its reference. A protein consequence can change with the transcript. Two heterozygous variants are not automatically in trans. A model rank is not automatically a probability. Expression is not a context-free property of a gene. A predicted HLA binder is not automatically a confirmed immunogenic neoantigen. A selected target list does not uniquely define an engineered mRNA construct.
+> [!IMPORTANT]
+> Biology Skills does not replace biological standards, databases, professional guidelines, or primary literature. It makes explicit the expert conditions required to use them correctly in AI-assisted work.
 
-These details are often treated as secondary metadata even when they change the biological conclusion. Biology Skills makes them explicit as compact rules that an AI agent can apply during analysis, coding, interpretation, design, and presentation.
+## How it works
 
-## What belongs here
-
-Biology Skills contains:
-
-* biological distinctions that materially affect correctness
-* the minimum context an agent should preserve or recover
-* expert stop conditions that should prevent premature interpretation or inference
-* common failure modes in computational and AI-assisted biology
-* operational instructions for agent behaviour
-* links to authoritative standards where exact nomenclature or syntax already has an owner
-
-It is not a replacement for HGVS, GA4GH, VCF, MANE, HGNC, NCBI, IPD-IMGT/HLA, professional guidelines, databases, or primary literature. Where a maintained authority exists, Biology Skills explains when it matters and points to it rather than creating a competing local standard.
-
-## Format
-
-Each domain is an installable skill:
+Each domain is one installable Agent Skill:
 
 ```text
 skills/
-  biology-core/
-    SKILL.md
-    references/
-  bioinformatics/
-    SKILL.md
-    references/
-  genomics/
-    SKILL.md
-    references/
-  synthetic-biology/
-    SKILL.md
-    references/
-  quinary-inference/
-    SKILL.md
-    references/
+└── genomics/
+    ├── SKILL.md
+    └── references/
+        ├── reference-genomes.md
+        ├── transcripts.md
+        ├── variant-representation.md
+        └── ...
 ```
 
-`SKILL.md` stays short and operational. Detailed topics live under `references/` and are read only when relevant.
+`SKILL.md` contains the cross-cutting rules and AI behaviour needed whenever that domain becomes relevant.
 
-Every reference topic uses the same structure:
+Focused topics live under `references/` and are loaded only when the task requires them.
+
+For example:
+
+```text
+question involves a negative genomic result
+                ↓
+          genomics/SKILL.md
+                ↓
+assay-scope-callability-and-negative-results.md
+```
+
+This keeps agent context compact while still exposing detailed expert guidance when necessary.
+
+## Reference style
+
+Reference pages encode expert stop conditions rather than general textbook knowledge.
+
+A typical page contains:
 
 ```text
 Summary
@@ -123,7 +165,63 @@ Examples
 Sources
 ```
 
-Short, standard, and complete copies are generated from these canonical files rather than maintained separately.
+Examples include:
+
+* [Measurement, observability and negative evidence](skills/biology-core/references/measurement-observability-and-negative-evidence.md)
+* [Entity mapping and join cardinality](skills/bioinformatics/references/entity-mapping-and-join-cardinality.md)
+* [Assay scope, callability and negative results](skills/genomics/references/assay-scope-callability-and-negative-results.md)
+* [Experimental unit, replication and pseudoreplication](skills/experimental-design/references/experimental-unit-replication-and-pseudoreplication.md)
+* [Residue identity, isoforms and construct mapping](skills/structural-biology/references/residue-identity-isoforms-and-construct-mapping.md)
+* [Ascertainment, selection and target population](skills/biological-statistics/references/ascertainment-selection-and-target-population.md)
+
+The complete reference catalogue is available on the [Biology Skills website](https://biologyskills.com/skills/).
+
+## Design principle
+
+Biology Skills asks:
+
+> **What would an expert refuse to assume before interpreting, comparing, transforming, or calculating from these data?**
+
+Many errors arise when biological meaning is lost across abstraction boundaries:
+
+```text
+biological state
+      ↓
+measurement
+      ↓
+observed data
+      ↓
+computational representation
+      ↓
+analysis
+      ↓
+biological interpretation
+      ↓
+causal inference
+```
+
+The skills specify what information must survive those transitions.
+
+## What belongs here
+
+Biology Skills focuses on guidance that can materially change scientific correctness:
+
+* distinctions that capable AI systems can plausibly overlook
+* minimum context required to interpret a biological object or result
+* expert stop conditions that should prevent premature conclusions
+* computational transformations that can silently change biological meaning
+* explicit AI behaviour for preserving uncertainty and provenance
+* links to authoritative standards when exact syntax or nomenclature already has an owner
+
+It is not intended to reproduce general biology textbooks or maintained external standards.
+
+Where an authority exists — including HGVS, GA4GH, VCF, MANE, HGNC, NCBI, IPD-IMGT/HLA, professional guidelines, databases, and primary literature — Biology Skills explains **when the authority matters and what must not be assumed**, then points to the maintained source.
+
+## Validation and export
+
+Canonical content lives under `skills/`.
+
+Repository checks and portable exports are generated from those source files:
 
 ```bash
 python scripts/validate.py
@@ -135,31 +233,32 @@ Generated output is written to `build/` and is not committed.
 
 ## Scientific review
 
-Every topic has an explicit status:
+Every reference has an explicit review status.
 
-* `draft`: open working content
-* `reviewed`: reviewed by an appropriate domain expert
-* `verified`: independently reviewed by at least two appropriate experts and supported by relevant evaluations
-* `consensus`: stable guidance grounded in an established standard or broad expert consensus
+| Status      | Meaning                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------ |
+| `draft`     | Open working content                                                                             |
+| `reviewed`  | Reviewed by an appropriate domain expert                                                         |
+| `verified`  | Independently reviewed by at least two appropriate experts and supported by relevant evaluations |
+| `consensus` | Stable guidance grounded in an established standard or broad expert consensus                    |
 
-The initial public release starts conservatively at `draft`. Review status changes through public pull requests so the review record remains inspectable.
+The project starts conservatively at `draft`. Status changes occur through public pull requests so the review history remains inspectable.
 
 See [`SOURCE_POLICY.md`](SOURCE_POLICY.md), [`STYLE_GUIDE.md`](STYLE_GUIDE.md), and [`GOVERNANCE.md`](GOVERNANCE.md).
 
 ## Contributing
 
-Small, precise contributions are preferred. A useful pull request usually does one of four things:
+Small, precise contributions are preferred.
 
-* corrects a biological rule
-* adds missing context or a failure mode
-* improves an authoritative source
-* adds an evaluation for an AI behaviour that should or should not occur
+Useful contributions include correcting a biological rule, adding a missing expert stop condition, improving an authoritative source, or adding an evaluation for AI behaviour.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Stewardship
 
-Biology Skills is an independent open-source project initiated and maintained by [Switzerland Omics](https://switzerlandomics.ch/). Scientific contribution, review, and maintainership are open to the wider biology and AI communities.
+Biology Skills is an independent open-source project initiated and maintained by [Switzerland Omics](https://switzerlandomics.ch/).
+
+Scientific contribution, review, and maintainership are open to the wider biology and AI communities.
 
 ## Licence
 
