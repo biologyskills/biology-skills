@@ -69,7 +69,8 @@ See [`INSTALL.md`](INSTALL.md) for installation options.
 
 ## Example: improving a scientific downloads page
 
-If Google DeepMind's AlphaGenome Atlas used Biology Skills, the same downloads page could expose the metadata needed for clearer interpretation and reproducibility.
+The Google DeepMind AlphaGenome Atlas downloads page provides files for users, but omits key reference, release, and file provenance needed for reproducible use.
+If Biology Skills was used, the same downloads page could expose the metadata needed for clearer interpretation and reproducibility.
 
 > [!IMPORTANT]
 > The test result shown below shows that if AlphaGenome Atlas used Biology Skills, its downloads page would communicate the same assets with clearer provenance, cleaner metadata structure, and stronger reproducibility cues.
