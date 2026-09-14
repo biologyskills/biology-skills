@@ -73,8 +73,8 @@ The Google DeepMind AlphaGenome Atlas downloads page provides the data, but omit
 
 Using Biology Skills, the same page can expose this metadata clearly without adding visual clutter.
 
-{: .highlight }
-The example below shows the same downloads with clearer provenance, better metadata structure, and stronger reproducibility cues.
+> [!IMPORTANT]
+> The example below shows the same downloads with clearer provenance, better metadata structure, and stronger reproducibility cues.
 
 The Biology Skills version adds **reference and release metadata**, **explicit annotation and file provenance**, and **structured technical details**.
 
