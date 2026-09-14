@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src=".github/assets/biology-skills-mascot.jpg"
+    src=".github/assets/biologyskills_mascot_compressed.jpg"
     width="150"
     alt="Biology Skills"
   />
