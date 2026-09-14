@@ -27,10 +27,13 @@ env/
 *.log
 *.tmp
 *.temp
+*.tmp
 *.bak
 *~
 *.swp
 *.swo
+temp
+tmp
 
 # macOS
 .DS_Store

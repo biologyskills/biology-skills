@@ -1,34 +1,39 @@
 # Changelog
 
+## 0.4.0
+
+Expanded Biology Skills with expert guidance for measurement validity, experimental design, structural biology, and biological statistics.
+
+* Added `experimental-design`, `structural-biology`, and `biological-statistics` Agent Skills.
+* Added guidance for observability and negative evidence, identifier mapping and join cardinality, genomic callability, and population-frequency interpretation.
+* Added structural guidance for residue identity, isoforms, experimental constructs, predicted structures, and confidence metrics.
+* Added statistical guidance for experimental units, pseudoreplication, ascertainment, selection, denominators, and target populations.
+* Updated skill routing and documentation for the expanded domain set.
+
 ## 0.3.0
 
-Expanded Biology Skills with synthetic-biology guidance for personalised mRNA vaccine design.
+Added synthetic-biology guidance for personalised mRNA vaccine design.
 
-* Added the `synthetic-biology` Agent Skill for converting biological observations, predictions, and selected targets into engineered biological sequences and constructs.
-* Added guidance for patient-specific neoantigen identity, tumour-normal evidence, transcript and haplotype reconstruction, mutant-sequence context, and clonality.
-* Added guidance for HLA identity, peptide:HLA prediction, presentation, T-cell recognition, immunogenicity, and the distinction between prediction and experimental evidence.
-* Added guidance for finite target-set selection under uncertainty, including candidate-universe definition, score semantics, missing evidence, dependence, redundancy, and set-level constraints.
-* Added guidance for mRNA polyepitope construct design, including target order, artificial junction sequences, amino-acid versus nucleotide identity, sequence engineering, and design-to-manufacturing provenance.
-* Added explicit distinctions between source biological state, predicted target behaviour, selected vaccine targets, engineered constructs, manufactured products, immune responses, and clinical outcomes.
-* Updated skill routing, repository documentation, and website domain listings to include `synthetic-biology`.
+* Added the `synthetic-biology` Agent Skill.
+* Added guidance for neoantigen identity, peptide:HLA interpretation, target-set selection under uncertainty, and mRNA polyepitope construct design.
+* Added clearer separation between biological observations, predictions, selected targets, engineered constructs, and downstream outcomes.
+* Updated routing and documentation for the new domain.
 
 ## 0.2.0
 
-Expanded Biology Skills with new bioinformatics and causal-inference guidance.
+Expanded Biology Skills with bioinformatics and causal-inference guidance.
 
-* Added the `bioinformatics` Agent Skill for computational identity, metadata, provenance, interoperability, QC outputs, and evidence exchange.
-* Added the `quinary-inference` Agent Skill for reasoning about complete causal explanations, unresolved evidence, competing hypotheses, and posterior support.
-* Added bioinformatics references for QC outputs and sample identity, metadata and provenance, and qualifying evidence.
-* Added genomics guidance for qualifying variants and explicit, versioned variant-selection criteria using the Qualifying Variant Set Standard (QVSS).
-* Added support for the Qualifying Evidence Matrix (QEM) as an interoperable representation of verifiable evidence availability.
-* Expanded genomics guidance for sequencing files, genomic intervals, alignment files and indexes, variant call files, HGVS nomenclature, coding and protein consequences, and exact reference provenance.
-* Updated skill routing and repository documentation to clarify the boundaries between biological reasoning, bioinformatics, genomics, qualifying evidence, qualifying variants, and quinary inference.
+* Added `bioinformatics` and `quinary-inference` Agent Skills.
+* Added guidance for metadata, provenance, sample identity, QC outputs, qualifying evidence, and qualifying variants.
+* Expanded genomics coverage for sequencing files, intervals, alignments, variant calls, HGVS nomenclature, coding consequences, and reference provenance.
+* Added support for QEM and QVSS concepts.
+* Updated routing and repository documentation.
 
 ## 0.1.0
 
 Initial public release.
 
-- Added `biology-core` and `genomics` Agent Skills.
-- Added concise reference topics for biological context, evidence, identifiers, reference genomes, variant representation, transcripts, inheritance, phase, and gene expression.
-- Added public source, review, style, contribution, and governance policies.
-- Added structural validation, portable bundle export, tests, and behaviour evaluations.
+* Added `biology-core` and `genomics` Agent Skills.
+* Added foundational references for biological context, evidence, identifiers, reference genomes, variants, transcripts, inheritance, phase, and gene expression.
+* Added contribution, governance, validation, testing, and release infrastructure.
+

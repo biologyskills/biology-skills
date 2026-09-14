@@ -1,31 +1,34 @@
 ---
 name: bioinformatics
-description: Apply computational correctness rules for biological data as they move between files, tools, workflows, evidence systems, and reports. Use when biological identity, metadata, provenance, input/output conventions, file discovery, evidence availability, interoperability, or computational transformations can change the meaning or traceability of a result.
+description: Apply computational correctness rules for biological data as they move between files, tools, workflows, evidence systems, mappings, matrices, and reports. Use when biological identity, mapping cardinality, metadata, provenance, input/output conventions, file discovery, evidence availability, interoperability, or computational transformations can change the meaning or traceability of a result.
 ---
 
 # Bioinformatics
 
-Use this skill when biological data or results pass between computational files, tools, workflow stages, evidence systems, or reporting systems.
+Use this skill when biological data or results pass between computational files, tools, workflow stages, evidence systems, identifier spaces, matrices, or reporting systems.
 
 Bioinformatics should preserve four things across these boundaries:
 
-1. **identity** — what biological or computational object is represented,
-2. **lineage** — where it came from and what produced it,
-3. **semantics** — what the data, file, field, or evidence value means,
-4. **interoperability** — whether the next system can interpret it correctly.
+1. **identity** - what biological or computational object is represented,
+2. **lineage** - where it came from and what produced it,
+3. **semantics** - what the data, mapping, field, or evidence value means,
+4. **interoperability** - whether the next system can interpret it correctly.
 
 ## Core rules
 
 - Preserve biological identity separately from subject, specimen, library, lane, run, file, processing stage, and derived result when these represent distinct entities.
-- Do not infer biological identity solely from filenames, directory names, or naming conventions when authoritative metadata exist elsewhere.
+- Do not infer biological identity solely from filenames, directory names, row order, array position, or naming conventions when authoritative identifiers exist elsewhere.
 - Preserve lineage from derived results back to their relevant biological source, experimental inputs, computational inputs, and transformations.
 - Attach metadata to the entity or process it actually describes. Do not flatten sample-, assay-, run-, file-, analysis-, and QC-level properties into one ambiguous record.
-- Do not assume one-to-one relationships between subjects, samples, libraries, runs, lanes, files, or analyses.
+- Do not assume one-to-one relationships between subjects, samples, libraries, runs, lanes, files, analyses, genes, transcripts, proteins, features, or identifiers.
+- Before mapping or joining biological identifiers, establish the source entity type, target entity type, namespace, expected cardinality, ambiguity policy, and mapping-resource version.
+- A successful identifier match does not prove biological equivalence or a one-to-one relationship.
+- Treat unexpected row multiplication, row loss, duplicated identifiers, or axis reordering as semantic events that require explanation.
 - Treat filenames, paths, extensions, directory structures, and output conventions as computational interfaces when downstream systems depend on them.
 - Do not rename, reformat, merge, split, or relocate data without considering whether identity, discovery, parsing, provenance, or downstream interpretation depends on the original representation.
 - Distinguish file location from file identity. Preserve checksums or content digests when exact file identity or transfer integrity matters.
 - Distinguish planned, requested, or intended values from observed, measured, or delivered values.
-- Preserve software, workflow, configuration, reference-resource, and database versions when changes can alter the result.
+- Preserve software, workflow, configuration, mapping-resource, reference-resource, and database versions when changes can alter the result.
 - Keep stable machine identifiers separate from human-readable display labels.
 - Preserve units, scopes, and calculation contexts for quantitative values when they are required for unambiguous interpretation.
 - Distinguish support for a software tool from support for a particular command, output type, version, file representation, or parser.
@@ -38,7 +41,7 @@ Bioinformatics should preserve four things across these boundaries:
 
 ## AI behaviour
 
-Before designing, changing, combining, or interpreting a computational biological object, establish:
+Before designing, changing, combining, mapping, or interpreting a computational biological object, establish:
 
 1. what biological entity or process it represents,
 2. what computational object is being handled,
@@ -46,8 +49,13 @@ Before designing, changing, combining, or interpreting a computational biologica
 4. which processing stage it belongs to,
 5. what downstream system will consume it,
 6. how identity is established,
-7. which provenance must remain recoverable,
-8. which conventions or standards govern its interpretation.
+7. what mapping cardinalities are possible,
+8. which provenance must remain recoverable,
+9. which conventions or standards govern its interpretation.
+
+Before a join or identifier conversion, state the expected analytical unit. Compare row or entity counts before and after the transformation and determine whether duplication or collapse is biologically intended.
+
+Do not use row order or matrix position as a substitute for sample identity unless ordering is explicitly guaranteed and verified across every object involved.
 
 Do not invent a universal naming convention across unrelated bioinformatics tools.
 
@@ -77,4 +85,5 @@ Read the relevant reference when the task depends on it:
 - [`references/qc-outputs-and-sample-identity.md`](references/qc-outputs-and-sample-identity.md) for QC output discovery, sample naming, processing-stage identity, MultiQC compatibility, supported outputs, custom QC content, and aggregation provenance
 - [`references/metadata-and-provenance.md`](references/metadata-and-provenance.md) for biological sample lineage, experimental and computational provenance, metadata propagation, identifier scope, file identity, and traceability of derived data
 - [`references/qualifying-evidence.md`](references/qualifying-evidence.md) for verifiable rule-based evidence, evidence availability, raw rule outcomes, QEM semantics, versioned rule sets, and separation of qualifying evidence from downstream interpretation or inference
+- [`references/entity-mapping-and-join-cardinality.md`](references/entity-mapping-and-join-cardinality.md) for identifier mapping, one-to-many and many-to-many relationships, row multiplication, matrix-axis identity, ambiguous mappings, and biologically safe joins
 

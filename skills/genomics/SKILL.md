@@ -1,11 +1,11 @@
 ---
 name: genomics
-description: Apply biological and computational correctness rules for genomic references, sequencing data, coordinates, variant representation and qualification, HGVS nomenclature, transcripts, inheritance, gene expression, and molecular consequences. Use for genomics tasks where reference identity, file semantics, selection criteria, annotation, genotype, phase, or biological context can change interpretation.
+description: Apply biological and computational correctness rules for genomic references, sequencing data, coordinates, variant representation and qualification, assay callability, population frequency, HGVS nomenclature, transcripts, inheritance, gene expression, and molecular consequences. Use for genomics tasks where reference identity, assay scope, negative findings, frequency denominators, file semantics, selection criteria, annotation, genotype, phase, or biological context can change interpretation.
 ---
 
 # Genomics
 
-Use this skill for genome analysis, sequencing data, variant representation or selection, variant interpretation, genome annotation, pedigree reasoning, sequence-based prediction, and reporting of genomic results.
+Use this skill for genome analysis, sequencing data, variant representation or selection, variant interpretation, genome annotation, pedigree reasoning, sequence-based prediction, population-frequency interpretation, and reporting of genomic results.
 
 ## Core rules
 
@@ -17,6 +17,12 @@ Use this skill for genome analysis, sequencing data, variant representation or s
 - Treat variant qualification as contextual rather than intrinsic. A variant qualifies only relative to declared criteria, their version, the application context, input data, and rule evaluation.
 - Do not equate qualification or passage through a variant-selection rule with pathogenicity, statistical significance, causality, reportability, prioritisation, or clinical action.
 - Treat scientifically consequential variant-selection criteria as part of the analysis specification. Preserve their field semantics, thresholds, logical structure, missing-value behaviour, external resources, and version when these affect which variants qualify.
+- A negative genomic result is interpretable only relative to assay scope, sample-level callability, event-class sensitivity, and relevant analytical limitations.
+- Coverage or read depth alone does not establish sensitivity to every relevant variant class.
+- A no-call, absent VCF record, or filtered record is not automatically a reference genotype.
+- Population allele frequency is a property of an observed allele in a defined resource, release, denominator, and sampled population. It is not a context-free property permanently attached to the variant.
+- Distinguish allele count, allele number, allele frequency, global frequency, group-specific frequency, and maximum-group frequency.
+- Do not turn missing population data or `AN=0` into evidence that an allele is absent or rare.
 - When reporting sequence variants using HGVS, use the current HGVS Nomenclature recommendations and an appropriate versioned reference sequence. A gene symbol, genome-build label, or VCF coordinate alone is not a complete HGVS description.
 - Coding, splice, RNA, and protein consequences can be transcript-dependent. Preserve the transcript and version when they affect the claim.
 - Molecular consequence, predicted functional effect, experimentally measured effect, pathogenicity, penetrance, and phenotype are different levels of inference.
@@ -32,7 +38,17 @@ Before converting between genomic formats, establish the coordinate convention, 
 
 Before interpreting VCF or BCF content, inspect the header and producing workflow. Do not give `PASS`, `QUAL`, `GQ`, an absent record, or a genotype string stronger meaning than the file supports.
 
+Before interpreting a negative sequencing result, establish:
+
+1. whether the relevant locus was intended to be interrogated,
+2. whether it was callable in this sample,
+3. which event classes the assay and pipeline could detect,
+4. whether the relevant allele fraction, repeat size, structural event, copy-number state, or mitochondrial state was within validated scope,
+5. whether the conclusion is absence, non-detection, or unresolved measurement.
+
 Before applying, reproducing, or interpreting variant-selection criteria, establish the analysis context and the exact criteria set used. Determine the criteria version, input-field semantics, missing-value behaviour, logical structure, and material external resources. Do not reconstruct hidden selection logic from the resulting variant list alone, and do not silently treat missing values as satisfying a criterion. If qualification is reported, distinguish individual rule outcomes from any declared set-level qualifying status.
+
+Before using a population-frequency value, establish the exact allele representation, resource and release, AC and AN where available, relevant population or ancestry grouping, and whether the site was callable. Do not interpret unavailable frequency as zero.
 
 When exact sequence-variant nomenclature is required, use current HGVS Nomenclature. Establish the reference-sequence accession and version before generating the description. Do not convert VCF to HGVS by coordinate or string manipulation alone. For human transcript-based reporting, use the transcript specified by the source analysis or, when an appropriate standard transcript must be selected, follow current MANE guidance. Do not silently replace a supplied transcript. Mark predicted RNA or protein consequences as predicted, and validate complex or uncertain HGVS descriptions rather than extrapolating syntax.
 
@@ -62,4 +78,6 @@ Read the relevant reference when the task depends on it:
 - [`references/coding-sequence-and-protein-consequences.md`](references/coding-sequence-and-protein-consequences.md) for coding frames, codons, genetic codes, molecular consequence terms, and protein consequences
 - [`references/inheritance-and-phase.md`](references/inheritance-and-phase.md) for genotype, ploidy, inheritance, phase, segregation, mosaicism, heteroplasmy, and pedigree reasoning
 - [`references/gene-expression.md`](references/gene-expression.md) for gene and transcript expression, assay context, cellular composition, normalization, and regulatory interpretation
+- [`references/assay-scope-callability-and-negative-results.md`](references/assay-scope-callability-and-negative-results.md) for sample-level callability, assay scope, variant-class sensitivity, coverage limitations, and interpretation of negative genomic findings
+- [`references/population-frequency-denominators-and-ancestry.md`](references/population-frequency-denominators-and-ancestry.md) for AC, AN, AF, callability, population and ancestry context, resource releases, and safe interpretation of population frequencies
 
