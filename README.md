@@ -71,21 +71,16 @@ See [`INSTALL.md`](INSTALL.md) for installation options.
 
 If Google DeepMind's AlphaGenome Atlas used Biology Skills, the same downloads page could expose the metadata needed for clearer interpretation and reproducibility.
 
+> [!RESULT]
+> If AlphaGenome Atlas used Biology Skills, its downloads page could communicate the same assets with clearer provenance, cleaner metadata structure, and stronger reproducibility cues.
+
+The Biology Skills version ensured: reference and release **metadata**, **explicit** annotation and file **provenance**, structured technical details **without cluttering the interface**.
 
 <p align="center">
   <img src="assets/alphagenome-demo.gif"
        alt="AlphaGenome Atlas downloads page before and after applying Biology Skills"
-       width="900">
+       width="600">
 </p>
-
-> [!IMPORTANT]
-> Claim: If AlphaGenome Atlas used Biology Skills, its downloads page could communicate the same assets with clearer provenance, cleaner metadata structure, and stronger reproducibility cues.
-
-The Biology Skills version adds:
-
-- **Reference and release metadata**
-- **Explicit annotation and file provenance**
-- **Structured technical details without cluttering the interface**
 
 ## Skill domains
 
