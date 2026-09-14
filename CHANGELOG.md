@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0
+
+Expanded Biology Skills with synthetic-biology guidance for personalised mRNA vaccine design.
+
+* Added the `synthetic-biology` Agent Skill for converting biological observations, predictions, and selected targets into engineered biological sequences and constructs.
+* Added guidance for patient-specific neoantigen identity, tumour-normal evidence, transcript and haplotype reconstruction, mutant-sequence context, and clonality.
+* Added guidance for HLA identity, peptide:HLA prediction, presentation, T-cell recognition, immunogenicity, and the distinction between prediction and experimental evidence.
+* Added guidance for finite target-set selection under uncertainty, including candidate-universe definition, score semantics, missing evidence, dependence, redundancy, and set-level constraints.
+* Added guidance for mRNA polyepitope construct design, including target order, artificial junction sequences, amino-acid versus nucleotide identity, sequence engineering, and design-to-manufacturing provenance.
+* Added explicit distinctions between source biological state, predicted target behaviour, selected vaccine targets, engineered constructs, manufactured products, immune responses, and clinical outcomes.
+* Updated skill routing, repository documentation, and website domain listings to include `synthetic-biology`.
+
 ## 0.2.0
 
 Expanded Biology Skills with new bioinformatics and causal-inference guidance.
