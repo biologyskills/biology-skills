@@ -67,6 +67,28 @@ Install or expose the relevant directories using the Agent Skills mechanism supp
 
 See [`INSTALL.md`](INSTALL.md) for installation options.
 
+## Example: improving a scientific downloads page
+
+If Google DeepMind's AlphaGenome Atlas used Biology Skills, the same downloads page could expose the metadata needed for clearer interpretation and reproducibility.
+
+<table>
+  <tr>
+    <td align="center"><strong>Original</strong></td>
+    <td align="center"><strong>Biology Skills</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/alphagenome-downloads-before.png" alt="Original AlphaGenome Atlas downloads page" width="100%"></td>
+    <td><img src="assets/alphagenome-downloads-after.png" alt="AlphaGenome Atlas downloads page using Biology Skills" width="100%"></td>
+  </tr>
+</table>
+
+The Biology Skills version adds:
+
+- **Reference and release metadata**
+- **Explicit annotation and file provenance**
+- **Structured technical details without cluttering the interface**
+
+
 ## Skill domains
 
 | Domain                                                   | What it protects                                                                                              |
