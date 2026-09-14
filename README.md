@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src=".github/assets/biologyskills_mascot_compressed.jpg"
+    src="assets/biologyskills_mascot_compressed.jpg"
     width="150"
     alt="Biology Skills"
   />
@@ -46,7 +46,7 @@ Biology Skills makes these assumptions operational so an AI agent knows **what i
 
 <p align="center">
   <img
-    src=".github/assets/biology-skills-browser.png"
+    src="assets/biology-skills-browser.png"
     width="900"
     alt="Biology Skills domain and expert reference documentation"
   />
