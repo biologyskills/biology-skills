@@ -72,6 +72,7 @@ Biology Skills makes these assumptions operational so an AI agent knows **what i
   <em>Broad Agent Skills route tasks to focused expert references only when required.</em>
 </p>
 
+
 ## Quick start
 
 ```bash
@@ -79,7 +80,19 @@ git clone https://github.com/biologyskills/biology-skills.git
 cd biology-skills
 ```
 
-Install or expose the relevant directories using the Agent Skills mechanism supported by your AI client.
+Or install Biology Skills with one command with npx:
+
+```bash
+npx skills add biologyskills/biology-skills
+````
+
+<p align="center">
+  <img
+    src="assets/npm_screenshot.png"
+    width="800"
+    alt="Installing Biology Skills with the Agent Skills CLI"
+  />
+</p>
 
 See [`INSTALL.md`](INSTALL.md) for installation options.
 
