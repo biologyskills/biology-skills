@@ -1,28 +1,53 @@
 # Installation
 
-Biology Skills is vendor-neutral. Each directory under `skills/` follows the Agent Skills layout and can be used independently.
+Biology Skills is vendor-neutral. Each directory under `skills/` follows the [Agent Skills](https://agentskills.io/) format and can be used independently.
 
-## Clone
+## Install with Agent Skills
+
+Install directly from GitHub:
+
+```bash
+npx skills add biologyskills/biology-skills
+````
+
+The installer discovers the available Biology Skills domains and lets you choose which to install.
+
+For general biological work, select:
+
+```text
+biology-core
+```
+
+For more advanced details, select one or all:
+
+```text
+biology-core
+genomics
+...
+```
+
+You can install additional domains independently as required.
+
+## Manual installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/biologyskills/biology-skills.git
 cd biology-skills
 ```
 
-For general biological work, use:
+Then expose the relevant directories under `skills/` using the Agent Skills mechanism supported by your AI client.
 
-```text
-skills/biology-core/
-```
-
-For genomics, use both:
+For example:
 
 ```text
 skills/biology-core/
 skills/genomics/
+...
 ```
 
-Your AI client determines where Agent Skills are installed or exposed. Follow the current installation method for that client rather than using vendor-specific copies maintained here.
+Your AI client determines where Agent Skills are installed or exposed. Biology Skills keeps the canonical skill definitions vendor-neutral rather than maintaining client-specific copies.
 
 ## Reproducible use
 
@@ -37,3 +62,5 @@ python scripts/export.py
 ```
 
 Output is written to `build/`, including a compact `biology-essentials.md` bundle and short, standard, and complete topic views.
+
+
