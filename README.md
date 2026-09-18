@@ -120,6 +120,7 @@ The Biology Skills version adds **reference and release metadata**, **explicit a
 | [`biology-core`](skills/biology-core/)                   | Biological context, measurement, observability, evidence, provenance, and valid inference                     |
 | [`bioinformatics`](skills/bioinformatics/)               | Computational identity, mappings, metadata, provenance, interoperability, and evidence semantics              |
 | [`genomics`](skills/genomics/)                           | Reference systems, sequencing data, variants, transcripts, inheritance, callability, and population frequency |
+| [`clinical-genetics`](skills/clinical-genetics/)         | Pedigree identity, family relationships, reproductive roles, clinical states, segregation, and interoperability |
 | [`experimental-design`](skills/experimental-design/)     | Experimental units, replication, dependence, controls, and technical confounding                              |
 | [`structural-biology`](skills/structural-biology/)       | Protein and residue identity, isoforms, constructs, structure mappings, and prediction confidence             |
 | [`biological-statistics`](skills/biological-statistics/) | Ascertainment, selection, denominators, target populations, dependence, and transportability                  |
@@ -141,6 +142,9 @@ no variant detected
 
 protein consequence
     without the transcript used to derive it
+
+pedigree parent-child line
+    without distinguishing biological, adoptive, or reproductive relationship
 
 residue 117
     without the sequence, isoform, construct, or numbering system
@@ -216,6 +220,7 @@ Examples include:
 * [Measurement, observability and negative evidence](skills/biology-core/references/measurement-observability-and-negative-evidence.md)
 * [Entity mapping and join cardinality](skills/bioinformatics/references/entity-mapping-and-join-cardinality.md)
 * [Assay scope, callability and negative results](skills/genomics/references/assay-scope-callability-and-negative-results.md)
+* [Pedigree data semantics and interoperability](skills/clinical-genetics/references/pedigree-data-semantics-and-interoperability.md)
 * [Experimental unit, replication and pseudoreplication](skills/experimental-design/references/experimental-unit-replication-and-pseudoreplication.md)
 * [Residue identity, isoforms and construct mapping](skills/structural-biology/references/residue-identity-isoforms-and-construct-mapping.md)
 * [Ascertainment, selection and target population](skills/biological-statistics/references/ascertainment-selection-and-target-population.md)

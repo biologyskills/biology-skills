@@ -73,6 +73,22 @@ Reference examples:
 
 ---
 
+### [`clinical-genetics`](clinical-genetics/)
+
+Correctness rules for representing and analysing clinical pedigrees: person identity, family relationships, reproductive roles, phenotypes, diagnoses, samples, genomic findings, segregation, and interoperability with health and research systems.
+
+Use `clinical-genetics` whenever family structure or family-linked clinical and genomic observations contribute to genetic interpretation, from one pedigree in clinic to thousands of families analysed jointly in a biobank or HPC workflow.
+
+Core question:
+
+> **Does the pedigree preserve who each person is, how they are related, and what the clinical and genomic evidence actually establishes about inheritance?**
+
+Reference example:
+
+* [pedigree data semantics and interoperability](clinical-genetics/references/pedigree-data-semantics-and-interoperability.md)
+
+---
+
 ### [`experimental-design`](experimental-design/)
 
 Correctness rules for experimental units, replication, dependence, controls, batch structure, technical confounding, and validation.
@@ -199,6 +215,30 @@ genomics
   → Was this locus and event class callable?
 ```
 
+### Pedigree record versus pedigree diagram
+
+A clinical pedigree is a structured family-history dataset. The diagram is one representation of that record.
+
+These layers should remain distinct:
+
+```text
+people and clinical observations
+      ↓
+typed family and reproductive relationships
+      ↓
+structured pedigree record
+      ↓
+FHIR / EHR / research exchange
+      ↓
+analysis-specific projection
+      ↓
+pedigree diagram or statistical analysis
+```
+
+Generation numbers, symbol positions, relationship lines, and display fills are useful presentation conventions, but they should not replace stable identity, typed relationships, clinical states, or provenance.
+
+This distinction belongs to `clinical-genetics`.
+
 ### Evidence versus causal inference
 
 Evidence can be represented explicitly before it is used for causal reasoning.
@@ -241,12 +281,16 @@ bioinformatics
 genomics
   → What reference, allele, assay scope, transcript, genotype, and phase define the finding?
 
+clinical-genetics
+  → Which people, biological relationships, reproductive roles, phenotypes, samples, and family states define the pedigree and segregation evidence?
+
 biological-statistics
   → What selection process and denominator produced the estimate?
 
 quinary-inference
   → How strongly does the complete genotype–phenotype explanation follow from the available and unresolved evidence?
 ```
+
 
 A structure-based interpretation might instead require:
 
