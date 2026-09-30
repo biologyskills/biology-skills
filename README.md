@@ -104,11 +104,12 @@ Biological plots can remain technically valid while losing important context suc
 The [`hadley-viz`](skills/hadley-viz/) skill combines the grammar of graphics with biology-specific rules for preserving this information during visualisation.
 
 <p align="center">
-  <img
-    src="assets/dataViz.png"
-    width="800"
-    alt="Biological data visualisation before and after applying the HadleyViz skill"
-  />
+<img
+  src="https://biologyskills.com/assets/images/demos/hadleyViz/dataViz.png"
+  width="800"
+  alt="Data visualisation with the HadleyViz skill"
+>
+
 </p>
 
 ## Example: improving a scientific downloads page
