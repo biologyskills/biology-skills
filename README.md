@@ -62,7 +62,7 @@ Biology Skills makes these assumptions operational so an AI agent knows **what i
 
 <p align="center">
   <img
-    src="assets/biology-skills-browser.png"
+  src="https://biologyskills.com/assets/images/repo/biology-skills-browser.png"
     width="900"
     alt="Biology Skills domain and expert reference documentation"
   />
@@ -88,7 +88,7 @@ npx skills add biologyskills/biology-skills
 
 <p align="center">
   <img
-    src="assets/npm_screenshot.png"
+    src="https://biologyskills.com/assets/images/repo/npm_screenshot.png"
     width="800"
     alt="Installing Biology Skills with the Agent Skills CLI"
   />
@@ -124,7 +124,7 @@ Using Biology Skills, the same page can expose this metadata clearly without add
 The Biology Skills version adds **reference and release metadata**, **explicit annotation and file provenance**, and **structured technical details**.
 
 <p align="center">
-  <img src="assets/alphagenome-demo.gif"
+  <img src="https://biologyskills.com/assets/images/demos/alphagenome/alphagenome-demo.gif"
        alt="AlphaGenome Atlas downloads page before and after applying Biology Skills"
        width="600">
 </p>
