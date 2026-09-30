@@ -96,6 +96,7 @@ npx skills add biologyskills/biology-skills
 
 See [`INSTALL.md`](INSTALL.md) for installation options.
 
+---
 
 ## Example: biologically correct data visualisation
 
@@ -111,6 +112,38 @@ The [`hadley-viz`](skills/hadley-viz/) skill combines the grammar of graphics wi
 >
 
 </p>
+
+An example task was to retrieve expert-reviewed **TP53** variants from ClinVar and visualise their genomic positions and clinical classifications.
+
+The same prompt and data source were used in both cases.
+
+<div style="display: flex; gap: 20px; align-items: flex-start; margin: 1.5rem 0; flex-wrap: wrap;">
+
+  <figure style="flex: 1 1 360px; margin: 0;">
+    <h3 style="margin-top: 0; margin-bottom: 0.75rem;">Without Biology Skills</h3>
+    <img
+      src="{{ 'https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_reviewed_annotated.png' | relative_url }}"
+      alt="TP53 ClinVar visualisation produced without the HadleyViz Biology Skill"
+      style="width: 100%; height: auto; display: block;"
+    />
+  </figure>
+
+  <figure style="flex: 1 1 360px; margin: 0;">
+    <h3 style="margin-top: 0; margin-bottom: 0.75rem;">With the HadleyViz skill</h3>
+    <img
+      src="{{ 'https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_with_HadleyViz_skill_annotated.png' | relative_url }}"
+      alt="TP53 ClinVar visualisation produced using the HadleyViz Biology Skill"
+      style="width: 100%; height: auto; display: block;"
+    />
+  </figure>
+
+</div>
+
+The HadleyViz skill provides biological data visualisation guidance covering identity, genomic coordinates, categorical data, uncertainty, visual encoding, aggregation, distributions and other common biological plotting problems.
+
+[View the HadleyViz skill →]({{ '/skills/hadley-viz/' | relative_url }})
+
+---
 
 ## Example: improving a scientific downloads page
 
