@@ -177,6 +177,25 @@ Reference example:
 
 * [explanatory hypotheses and posterior support](quinary-inference/references/explanatory-hypotheses-and-posterior-support.md)
 
+---
+
+### [`hadley-viz`](hadley-viz/)
+
+Biologically correct data visualisation combining the grammar of graphics with biological identity, experimental design, statistical, provenance, and accessibility constraints.
+
+Use `hadley-viz` whenever biological data are being plotted, summarised visually, or interpreted from a figure and choices about units, identity, scale, uncertainty, aggregation, or encoding could change the scientific meaning.
+
+Core question:
+
+> **Does the visualisation preserve the biological meaning, structure, uncertainty, and identity of the underlying data?**
+
+Reference examples:
+
+* [biological identity and plot labels](hadley-viz/references/biological-identity-and-plot-labels.md)
+* [experimental units and visual independence](hadley-viz/references/experimental-units-and-visual-independence.md)
+* [genomic coordinates, variants and effects](hadley-viz/references/genomic-coordinates-variants-and-effects.md)
+* [visual encoding, colour and figure integrity](hadley-viz/references/visual-encoding-colour-and-figure-integrity.md)
+
 ## Important distinctions
 
 Biology Skills deliberately separates concepts that are often collapsed in scientific software or AI-generated reasoning.

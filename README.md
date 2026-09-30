@@ -96,6 +96,21 @@ npx skills add biologyskills/biology-skills
 
 See [`INSTALL.md`](INSTALL.md) for installation options.
 
+
+## Example: biologically correct data visualisation
+
+Biological plots can remain technically valid while losing important context such as experimental units, reference systems, uncertainty, denominators, or biological identity.
+
+The [`hadley-viz`](skills/hadley-viz/) skill combines the grammar of graphics with biology-specific rules for preserving this information during visualisation.
+
+<p align="center">
+  <img
+    src="assets/dataViz.png"
+    width="800"
+    alt="Biological data visualisation before and after applying the HadleyViz skill"
+  />
+</p>
+
 ## Example: improving a scientific downloads page
 
 The Google DeepMind AlphaGenome Atlas downloads page provides the data, **but omits** key reference, release, and file provenance needed for reproducible use.
@@ -124,6 +139,7 @@ The Biology Skills version adds **reference and release metadata**, **explicit a
 | [`experimental-design`](skills/experimental-design/)     | Experimental units, replication, dependence, controls, and technical confounding                              |
 | [`structural-biology`](skills/structural-biology/)       | Protein and residue identity, isoforms, constructs, structure mappings, and prediction confidence             |
 | [`biological-statistics`](skills/biological-statistics/) | Ascertainment, selection, denominators, target populations, dependence, and transportability                  |
+| [`hadley-viz`](skills/hadley-viz/) | Biological data visualisation preserving experimental units, identity, scale, uncertainty, aggregation, and figure integrity |
 | [`synthetic-biology`](skills/synthetic-biology/)         | Patient-specific target identity, peptide:HLA reasoning, target-set selection, and engineered sequence design |
 | [`quinary-inference`](skills/quinary-inference/)         | Complete causal explanations, unresolved evidence, competing hypotheses, and posterior support                |
 
