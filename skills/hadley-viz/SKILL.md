@@ -1,13 +1,13 @@
 ---
 id: hadley-viz
 name: HadleyViz
-description: Augmented data-visualisation rules combining ggplot2 grammar (Hadley R4DS) with biology-specific constraints.
+description: Augmented data-visualisation rules combining plot grammar (Hadley R4DS) with biology-specific constraints.
 ---
 # Data visualisation (HadleyViz)
 
 ## Summary
 
-HadleyViz ensures ggplot2 plots remain biologically valid. Before plotting or interpreting any chart, an agent must apply domain rules: identify the biological question, confirm the true experimental unit (e.g. donor vs. cell) and independence, and preserve exact identities and denominators. Plots must not imply unsupported precision or causality. The agent should check data transformations, sample size, and appropriate uncertainties. For example, label genetic variants with full HGVS names (not shorthand) and include reference context. Use logarithmic scales only if zeros/detect limits are handled. Colour encodings must be accessible (colorblind-friendly) and, if used, accompanied by redundant markers or labels. In summary: *stop and verify context before visualisation, then apply the grammar of graphics without losing biological meaning*.
+HadleyViz ensures plots remain biologically valid. The name is inspired by work made famous in R4DS and ggplot2. Before plotting or interpreting any chart, an agent must apply domain rules: identify the biological question, confirm the true experimental unit (e.g. donor vs. cell) and independence, and preserve exact identities and denominators. Plots must not imply unsupported precision or causality. The agent should check data transformations, sample size, and appropriate uncertainties. For example, label genetic variants with full HGVS names (not shorthand) and include reference context. Use logarithmic scales only if zeros/detect limits are handled. Colour encodings must be accessible (colorblind-friendly) and, if used, accompanied by redundant markers or labels. In summary: *stop and verify context before visualisation, then apply the grammar of graphics without losing biological meaning*.
 
 ## Core rules
 
