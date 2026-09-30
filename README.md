@@ -104,15 +104,6 @@ Biological plots can remain technically valid while losing important context suc
 
 The [`hadley-viz`](skills/hadley-viz/) skill combines the grammar of graphics with biology-specific rules for preserving this information during visualisation.
 
-<p align="center">
-<img
-  src="https://biologyskills.com/assets/images/demos/hadleyViz/dataViz.png"
-  width="800"
-  alt="Data visualisation with the HadleyViz skill"
->
-
-</p>
-
 An example task was to retrieve expert-reviewed **TP53** variants from ClinVar and visualise their genomic positions and clinical classifications.
 
 The same prompt and data source were used in both cases.
@@ -122,7 +113,7 @@ The same prompt and data source were used in both cases.
   <figure style="flex: 1 1 360px; margin: 0;">
     <h3 style="margin-top: 0; margin-bottom: 0.75rem;">Without Biology Skills</h3>
     <img
-      src="{{ 'https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_reviewed_annotated.png' | relative_url }}"
+      src="https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_reviewed_annotated.png"
       alt="TP53 ClinVar visualisation produced without the HadleyViz Biology Skill"
       style="width: 100%; height: auto; display: block;"
     />
@@ -131,7 +122,7 @@ The same prompt and data source were used in both cases.
   <figure style="flex: 1 1 360px; margin: 0;">
     <h3 style="margin-top: 0; margin-bottom: 0.75rem;">With the HadleyViz skill</h3>
     <img
-      src="{{ 'https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_with_HadleyViz_skill_annotated.png' | relative_url }}"
+      src="https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_with_HadleyViz_skill_annotated.png"
       alt="TP53 ClinVar visualisation produced using the HadleyViz Biology Skill"
       style="width: 100%; height: auto; display: block;"
     />
@@ -142,6 +133,15 @@ The same prompt and data source were used in both cases.
 The HadleyViz skill provides biological data visualisation guidance covering identity, genomic coordinates, categorical data, uncertainty, visual encoding, aggregation, distributions and other common biological plotting problems.
 
 [View the HadleyViz skill →]({{ '/skills/hadley-viz/' | relative_url }})
+
+<p align="center">
+<img
+  src="https://biologyskills.com/assets/images/demos/hadleyViz/dataViz.png"
+  width="800"
+  alt="Data visualisation with the HadleyViz skill"
+>
+
+</p>
 
 ---
 
