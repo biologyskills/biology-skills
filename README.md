@@ -111,19 +111,10 @@ The same prompt and data source were used in both cases.
 <div style="display: flex; gap: 20px; align-items: flex-start; margin: 1.5rem 0; flex-wrap: wrap;">
 
   <figure style="flex: 1 1 360px; margin: 0;">
-    <h3 style="margin-top: 0; margin-bottom: 0.75rem;">Without Biology Skills</h3>
+    <h3 style="margin-top: 0; margin-bottom: 0.75rem;">[1] Without Biology Skills and [2] with Biology Skills</h3>
     <img
-      src="https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_reviewed_annotated.png"
+      src="https://biologyskills.com/assets/images/demos/hadleyViz/output/example.png"
       alt="TP53 ClinVar visualisation produced without the HadleyViz Biology Skill"
-      style="width: 100%; height: auto; display: block;"
-    />
-  </figure>
-
-  <figure style="flex: 1 1 360px; margin: 0;">
-    <h3 style="margin-top: 0; margin-bottom: 0.75rem;">With the HadleyViz skill</h3>
-    <img
-      src="https://biologyskills.com/assets/images/demos/hadleyViz/output/tp53_clinvar_expert_with_HadleyViz_skill_annotated.png"
-      alt="TP53 ClinVar visualisation produced using the HadleyViz Biology Skill"
       style="width: 100%; height: auto; display: block;"
     />
   </figure>
