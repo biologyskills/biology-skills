@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0
+
+Added HadleyViz guidance for biologically correct data visualisation.
+
+* Added the `hadley-viz` Agent Skill.
+* Added guidance for experimental units, biological identity, genomic coordinates, uncertainty, transformations, aggregation, clustering, and visual encoding.
+* Added examples demonstrating improved biological data visualisation with Biology Skills.
+
 ## 0.5.1
 
 * Added native pedigree JSON template to support direct construction of pedigree files in `clinical-genetics`.
