@@ -101,11 +101,9 @@ See [`INSTALL.md`](INSTALL.md) for installation options.
 ## Example: biologically correct data visualisation
 
 Biological plots can remain technically valid while losing important context such as experimental units, reference systems, uncertainty, denominators, or biological identity.
-
-The [`hadley-viz`](skills/hadley-viz/) skill combines the grammar of graphics with biology-specific rules for preserving this information during visualisation.
+The `hadley-viz` skill combines the grammar of graphics with biology-specific rules for preserving this information during visualisation.
 
 An example task was to retrieve expert-reviewed **TP53** variants from ClinVar and visualise their genomic positions and clinical classifications.
-
 The same prompt and data source were used in both cases.
 
 <div style="display: flex; gap: 20px; align-items: flex-start; margin: 1.5rem 0; flex-wrap: wrap;">
@@ -121,9 +119,8 @@ The same prompt and data source were used in both cases.
 
 </div>
 
+<!---
 The HadleyViz skill provides biological data visualisation guidance covering identity, genomic coordinates, categorical data, uncertainty, visual encoding, aggregation, distributions and other common biological plotting problems.
-
-[View the HadleyViz skill →]({{ '/skills/hadley-viz/' | relative_url }})
 
 <p align="center">
 <img
@@ -133,6 +130,7 @@ The HadleyViz skill provides biological data visualisation guidance covering ide
 >
 
 </p>
+--->
 
 ---
 
